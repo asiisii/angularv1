@@ -9,4 +9,11 @@
 - the component represents an area of a view that shows inside the browser
 
 ## how to create a component
-- 
+- ng g c componentname
+
+## how to run the app
+- ng serve 
+- ng serve -o
+- ng serve -port 3000
+
+
