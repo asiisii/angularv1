@@ -1,0 +1,15 @@
+# File Structures
+
+- editorconfig includes code editor configuration for this angular project
+- package-lock.json includes version information for all packages installed into node modules by the npm client
+- package.json includes all required NPM package dependencies, app details, and npm commands
+- Angular.json file is the Angular Client configuration
+- tsconfig.spec.json
+- tsconfig.json - used by editors and TS languages servers to improve the development experience
+- tsconfig.app.json - includes TS configuration for this Angular App and includes Angular and TS template compile options
+
+
+src 
+- app: we mostly work inside this folder, we will generate all the files and logics 
+- assets: where we can put our media files like images, sound files, icons etc
+- we can generate environments directory to store environment variables

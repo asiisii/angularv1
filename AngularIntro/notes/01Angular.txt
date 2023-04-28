@@ -1,0 +1,12 @@
+# Angular
+
+- its a component vbase frontned framework
+- components arem ain building blocks of an Angular app
+- withoiut components we can't build a proper app
+
+### Component
+- the component is a combination of data html template and logics
+- the component represents an area of a view that shows inside the browser
+
+## how to create a component
+- 
