@@ -1,0 +1,10 @@
+Data binding
+-helps us to build dynamic and interactive applications by keeping the model and view in sync
+
+1. Interpolation: Interpolation is a one-way data binding method that allows us to bind a value from the component to the view. We can use the double curly braces {{ }} to bind the value. For example, {{ title }} will display the value of the title variable in the view.
+
+2. Property binding: Property binding is also a one-way data binding method that allows us to bind a value from the component to the view. Instead of using interpolation, you can use square brackets [] to bind the value. For example, [title]="pageTitle" will bind the value of the pageTitle variable to the title property in the view.
+
+3. Event binding: Event binding is a one-way data binding method that allows us to bind an event from the view to the component. We can use parentheses () to bind the event. For example, (click)="onButtonClick()" will call the onButtonClick() method in the component when the button is clicked.
+
+4. Two-way binding: Two-way binding is a two-way data binding method that allows us to bind a value from the component to the view and vice versa. We can use the ngModel directive to achieve two-way binding. For example, [(ngModel)]="name" will bind the value of the name variable to the input field in the view and update the name variable in the component when the user changes the input value.

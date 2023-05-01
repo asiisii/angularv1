@@ -1,0 +1,4 @@
+ngOnInit
+
+- its a callback lifecycle method which is invoke when the particualr component gets fully initalized (loaded inside the browser) inside the DOM
+- its different from the constructor as constructor will run soon after the object class is created
