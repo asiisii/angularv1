@@ -1,7 +1,11 @@
 SHARE DATA BETWEEN COMPONENTS
 
+SHARE DATA BETWEEN PARENT TO CHILD COMPONENT
 1. Parents to child Component via @Input Decorator
   - @Input Decorator used to share data between Parent component to a child component
-2. Child to parent Component via @Output Decorator
-3. Child to parent when there is Event, using the @Output Decorator and Event Emmiter
 
+
+SHARE DATA BETWEEN CHILD TO PARENT COMPONENT  
+1. Child to parent Component via @ViewChild Decorator
+2. CHild to Parent Component when there is Event, using the @Output Decorator and Event Emmiter
+  - this approach is ideal when we want to share data changes that occur on things like button clicks, from entries, and other user events
