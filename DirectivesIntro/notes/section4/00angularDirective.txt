@@ -1,0 +1,33 @@
+- what is angular directive and how to use
+- types of angular directives
+  - ngIf 
+  - ngTemplate
+  - ngSwitchCase
+  - ngFor
+
+- learn about ngClass & ngStyle directives
+- learn difference between structural directives and attribute directives
+
+
+Angular directive
+- it is special type of technology that can manipulate the DOM object
+- directives can do adding html elements removing html elemtns from DOM dynamically
+
+Angular directive(components)
+- directives are Components without a View
+- Angular components are Directives, with a View
+
+# everything you can do with Directives you can also do with Angular directives
+# but not everything you can do with Component, you can do with the Directive
+
+Directive Types:
+1. Component
+  - which is an angular directive with a template view
+2. structural
+  - which can change the DOM layout by adding and removing DOM elements
+3. attribute
+  - which can change the appearance or behavior of an elementm, component, or another directive
+4. Custom
+  - which can create our custom directive from scratch 
+
+

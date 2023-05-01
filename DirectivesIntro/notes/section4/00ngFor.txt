@@ -1,0 +1,3 @@
+- we use NgFor directive to Render an Array inside the View
+- NgFor directive is a structural directive
+- with NgFor Directive we can manipulatethe DOM
