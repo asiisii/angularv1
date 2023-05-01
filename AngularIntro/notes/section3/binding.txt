@@ -1,0 +1,29 @@
+- String interpolation is used to show dynamic data inside the view (HTML pages)
+- data binding use []
+- event binding use ()
+
+<!-- class binding method -->
+<h1 [class.text-red]="isDanger">AngularV1</h1>   <!-- turn red is isDanger is true -->
+
+<!-- propery binding -->
+<img [src]="imgUrl" alt="" />
+
+<!-- string interpolation -->
+<p>{{ msg }}</p>
+<img class="google-icon" src="{{ imgUrl }}" alt="Google Icon" />
+
+- whats one way data binding
+  - binding the data from component to view
+
+- whats two way data binding
+  - binding the data from view to component and the data from component to view
+
+
+ONE-WAY DATA BINDING ----------------------------------------------------------------
+# string interpolation - {{ msg }}
+# property binding - [msg]
+# class Binding - [class.text-red]
+# style bidning - [style.backgroundColor]
+
+TWO-WAY DATA BINDING ----------------------------------------------------------------
+# two-way bidning - [(ngModel)]

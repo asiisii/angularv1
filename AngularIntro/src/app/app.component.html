@@ -1,5 +1,51 @@
-<h1>AngularV1</h1>
+<h1 class="text-red">AngularV1</h1>
+
+<!-- class binding method -->
+<h1 [class.text-red]="isDanger">
+  Turn text red is isDanger is true- Class binding method
+</h1>
+
+<!-- style binding -->
+<!-- for naming like .color or .backgroundColor look up HTML DOM object properties -->
+<h1 [style.color]="!isDanger ? 'red' : 'green'">Style Binding</h1>
+
+<!-- propery binding -->
+<img [src]="imgUrl" alt="" />
+
+<!-- string interpolation -->
 <p>{{ msg }}</p>
+<img class="google-icon" src="{{ imgUrl }}" alt="Google Icon" />
+
+<!-- Event Binding -->
+<button (click)="handleEventBinding()">Event Binding</button>
+
+<!-- event filtering -->
+<input type="text" (keyup.enter)="handleEventFilteringAngularWay()" />
+<!-- Angular way -->
+
+<!-- Two way data binding -->
+<!-- Template Variable -->
+<input type="text" (keyup.enter)="templateVairable(username.value)" #username />
+<input type="text" [(ngModel)]="userName" (keyup.enter)="templateVairable2()" />
+
+<!-- one way data binding -->
+<!-- we can change the text on the View but it will always print the components data -->
+<input
+  type="text"
+  [value]="oneWayDataTypeTest"
+  (keyup.enter)="templateVairable2()"
+/>
+
+<!-- two way data binding -->
+<!-- now we can update the components value -->
+<input
+  type="text"
+  [(ngModel)]="oneWayDataTypeTest"
+  (keyup.enter)="templateVairable2()"
+/>
+
 <app-navbar></app-navbar>
 <app-post [fromParent]="parentMsg" (msgEvent)="reciveMsg($event)"></app-post>
 <p>{{ fromChildOutput }}</p>
+
+

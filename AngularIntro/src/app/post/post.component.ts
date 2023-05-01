@@ -12,6 +12,15 @@ export class PostComponent implements OnInit {
   outputChildMsg: string =
     'this is the output child message from the post component';
 
+  // testing
+  imgURL!: string;
+  postURL!: string;
+  postTitle!: string;
+  postDetails!: string;
+  moreDetailsLink!: string;
+  shouldAddBackgroundColor: boolean = false;
+  displayMoreDetails: boolean = false;
+
   @Input()
   fromParent!: string;
 
@@ -23,5 +32,16 @@ export class PostComponent implements OnInit {
 
   sendMsg(): void {
     this.msgEvent.emit(this.outputChildMsg);
+  }
+
+  updateBackgroundColor() {
+    console.log('====================================');
+    console.log('checkbox selected');
+    console.log('====================================');
+    this.shouldAddBackgroundColor = !this.shouldAddBackgroundColor;
+  }
+
+  updateDisplayMoreDetails() {
+    this.displayMoreDetails = !this.displayMoreDetails
   }
 }

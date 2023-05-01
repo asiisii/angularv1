@@ -1,0 +1,10 @@
+.form-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+}

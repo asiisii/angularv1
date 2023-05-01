@@ -3,3 +3,55 @@
 <app-post-list [fromPostParent]="postData"></app-post-list>
 
 <button (click)="sendMsg()">Click</button>
+
+<!-- practice data binding -->
+<h1>---------------------Practice data binding---------------------</h1>
+
+<div class="form-wrapper">
+  <h1>Post Form</h1>
+
+  <!-- show rel time -->
+  <input type="text" placeholder="Post Title" [(ngModel)]="postTitle" />
+  <textarea
+    name="PostDetails"
+    id=""
+    cols="30"
+    rows="10"
+    placeholder="Post Details"
+    [(ngModel)]="postDetails"
+  ></textarea>
+  <input type="text" placeholder="Post Image Url" [(ngModel)]="imgURL" />
+  <!-- this should say More Details link and upon clicking it should open in new tab -->
+  <input
+    type="text"
+    placeholder="Post URL"
+    [(ngModel)]="postURL"
+    (keyup.enter)="updateDisplayMoreDetails()"
+  />
+  <!-- upon selecting the checkbox it should give background to Post Title Input  -->
+  <label>
+    <input
+      type="checkbox"
+      [(ngModel)]="shouldAddBackgroundColor"
+      (click)="updateBackgroundColor()"
+    />
+    Add Background
+  </label>
+</div>
+
+<div class="form-wrapper">
+  <img [src]="imgURL" alt="" />
+  <h1 [style.backgroundColor]="shouldAddBackgroundColor ? 'yellow' : 'white'">
+    {{ postTitle }}
+  </h1>
+  <p>{{ postDetails }}</p>
+  <!-- <div *ngIf="displayMoreDetails">
+    <a [href]="postURL" target="_blank">More Details</a>
+  </div> -->
+  <a
+    [href]="postURL"
+    target="_blank"
+    [style.display]="postURL ? 'block' : 'none'"
+    >More Details</a
+  >
+</div>
