@@ -14,4 +14,21 @@ export class AppComponent {
     { id: 4, postTitle: 'Post4' },
     { id: 5, postTitle: 'Post5' },
   ];
+
+  // change detection
+  addData() {
+    this.objArr.push({
+      id: this.objArr.length + 1,
+      postTitle: 'Post' + (this.objArr.length + 1),
+    });
+  }
+
+  deleteData(id: number) {
+    console.log('====================================');
+    console.log(this.objArr.filter((data) => data.id !== id));
+    console.log('====================================');
+    this.objArr = this.objArr.filter((data) => data.id !== id);
+    // let index = this.objArr.indexOf(post) pass post data instead of id
+    // this.objArr.splice(index, 1)
+  }
 }

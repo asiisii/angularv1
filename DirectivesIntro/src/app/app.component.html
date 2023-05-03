@@ -7,5 +7,10 @@
   <li *ngFor="let post of objArr">{{ post | json }}</li>
 </ol>
 <ol>
-  <li *ngFor="let post of objArr">{{ post.postTitle }}</li>
+  <li *ngFor="let post of objArr">
+    {{ post.postTitle }} <button (click)="deleteData(post.id)">Delete Data</button>
+  </li>
 </ol>
+
+<!-- change detection -->
+<button (click)="addData()">Add New Data</button>
