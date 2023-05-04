@@ -56,3 +56,16 @@
   <div *ngSwitchCase="'step 3'">Step 3 Form</div>
   <div *ngSwitchDefault>Default Form</div>
 </div>
+
+<!-- ngStyle -->
+
+<p>NgStyle Directive</p>
+
+<h1
+  [ngStyle]="{
+    color: isActive ? 'red' : 'blue',
+    textTransform: isActive ? 'uppercase' : 'lowercase'
+  }"
+>
+  Angular
+</h1>

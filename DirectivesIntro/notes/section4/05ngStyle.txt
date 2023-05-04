@@ -1,0 +1,12 @@
+<!-- ngStyle -->
+
+<p>NgStyle Directive</p>
+
+<h1
+  [ngStyle]="{
+    color: isActive ? 'red' : 'blue',
+    textTransform: isActive ? 'uppercase' : 'lowercase'
+  }"
+>
+  Angular
+</h1>

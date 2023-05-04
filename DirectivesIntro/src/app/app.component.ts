@@ -11,6 +11,7 @@ export class AppComponent {
 
   emptyObjArr: Array<any> = [];
   stepForm!: string;
+  isActive: boolean = true;
 
   // change detection
   addData() {
