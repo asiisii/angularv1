@@ -1,0 +1,37 @@
+<h1>{{ title | uppercase }}</h1>
+<h1>{{ title | lowercase }}</h1>
+<h1>{{ count | number }}</h1>
+<!-- 
+  1 represents the minimum integer digits, 
+  2 represents the maximum fraction digits, and 
+  3 represents the minimum number of total digits.
+
+  output = 3.124
+
+ -->
+<h1>{{ decVal | number : "1.2-3" }}</h1>
+
+<h1>{{ price | currency }}</h1>
+<h1>{{ price | currency : "JPY" }}</h1>
+<h1>{{ price | currency : "JPY" : false }}</h1>
+<h1>{{ price | currency : "JPY" : false : "2.1-1" }}</h1>
+
+<h1>{{ todaysDate | date : "short" }}</h1>
+<h1>{{ todaysDate | date : "shortDate" }}</h1>
+
+<h1>{{ jsonPipe | json }}</h1>
+
+<h1>{{ percentagePipe | percent }}</h1>
+<h1>{{ percentagePipe | percent : "1.1-1" }}</h1>
+
+<h3>{{ slicePipe }}</h3>
+<!-- a,b,c,d,e,f,g,h,i,j -->
+<h3>{{ slicePipe | slice : 0 : 3 }}</h3>
+<!-- a,b,c -->
+
+<!-- CUSTOM PIPE -->
+<h2>{{ userDetails.name | append }}</h2>
+<h2>{{ userDetails.name | appendCLI }}</h2>
+
+<h3>{{ dummyData | summary : 45 }}</h3>
+<h3>{{ dummyData | summary}}</h3>

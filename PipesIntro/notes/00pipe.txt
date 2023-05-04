@@ -1,0 +1,14 @@
+PIPE
+
+- they are used to transforming data into a particular format when we ONLY need that data transformed 'in' a template. or the HTML view
+
+
+BULT-IN PIPES
+1. Uppercase pipe
+2. LowerCase pipe
+3. Decimal / Number pipe
+4. Currency pipe
+5. Date pipe
+6. JSON pipe
+7. Percent pipe
+8. Slice pipe
