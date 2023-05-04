@@ -1,0 +1,37 @@
+STRUCTURAL DIRECTIVE
+- we can mnipulate the DOM by adding and removing HTML elements to the DOM
+- can identify with leading * symbol
+
+- Structural directive
+  - *ngFor
+          <!-- ngIf -->
+          <ul>
+            <li *ngFor="let post of postArr" > {{ post }} </li>
+          </ul>
+  - *ngIf
+          <!-- ngIf -->
+          <div *ngIf="emptyObjArr.length > 0">
+          <ol>
+            <li *ngFor="let post of emptyObjArr; let i">
+              {{ post.postTitle }} <button (click)="deleteData(i)">Delete Data</button>
+            </li>
+          </ol>
+          </div>
+
+          <div *ngIf="emptyObjArr.length == 0">
+            <p>There is no Data to Fetch...</p>
+          </div>
+  - *ngSwitchCase
+          <!-- ngSwitchCase -->
+          <div>
+            <button (click)="handleStepForm('step 1')">Step 1</button>
+            <button (click)="handleStepForm('step 2')">Step 2</button>
+            <button (click)="handleStepForm('step 3')">Step 3</button>
+          </div>
+
+          <div [ngSwitch]="stepForm">
+            <div *ngSwitchCase="'step 1'">Step 1 Form</div>
+            <div *ngSwitchCase="'step 2'">Step 2 Form</div>
+            <div *ngSwitchCase="'step 3'">Step 3 Form</div>
+            <div *ngSwitchDefault>Default Form</div>
+          </div>

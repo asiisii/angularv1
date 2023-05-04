@@ -1,0 +1,27 @@
+ATTRIBUTE DIRECTIVE
+- changes the appearance or the behavior of a DOM elements
+- Attribute directives
+  - ngStyle
+      <!-- ngStyle -->
+
+      <p>NgStyle Directive</p>
+
+      <h1
+        [ngStyle]="{
+          color: isActive ? 'red' : 'blue',
+          textTransform: isActive ? 'uppercase' : 'lowercase'
+        }"
+      >
+        Angular
+      </h1>
+
+  - ngClass
+        <!-- ngClass -->
+        <h1
+          [ngClass]="{
+            main: isActive,
+            'text-weight': isActive
+          }"
+        >
+          ngClass
+        </h1>
