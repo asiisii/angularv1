@@ -7,11 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   postArr: Array<string> = ['Post1', 'Post2', 'Post3', 'Post4', 'Post5'];
-  objArr: Array<any> = [
-    { id: 1, postTitle: 'Post1' },
-  ];
+  objArr: Array<any> = [{ id: 1, postTitle: 'Post1' }];
 
   emptyObjArr: Array<any> = [];
+  stepForm!: string;
 
   // change detection
   addData() {
@@ -29,6 +28,10 @@ export class AppComponent {
     // in react we would pass post.id to remove
     // this.objArr = this.objArr.filter((data) => data.id !== id);
 
-    this.objArr.splice(index, 1)
+    this.objArr.splice(index, 1);
+  }
+
+  handleStepForm(status: string) {
+    this.stepForm = status;
   }
 }

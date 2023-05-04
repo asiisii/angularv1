@@ -42,3 +42,17 @@
 <ng-template #noData>
   <p>There is no Data to Fetch...</p>
 </ng-template>
+
+<!-- ngSwitchCase -->
+<div>
+  <button (click)="handleStepForm('step 1')">Step 1</button>
+  <button (click)="handleStepForm('step 2')">Step 2</button>
+  <button (click)="handleStepForm('step 3')">Step 3</button>
+</div>
+
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="'step 1'">Step 1 Form</div>
+  <div *ngSwitchCase="'step 2'">Step 2 Form</div>
+  <div *ngSwitchCase="'step 3'">Step 3 Form</div>
+  <div *ngSwitchDefault>Default Form</div>
+</div>
