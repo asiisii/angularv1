@@ -1,0 +1,12 @@
+<!-- ngIf -->
+<div *ngIf="emptyObjArr.length > 0">
+<ol>
+  <li *ngFor="let post of emptyObjArr; let i">
+    {{ post.postTitle }} <button (click)="deleteData(i)">Delete Data</button>
+  </li>
+</ol>
+</div>
+
+<div *ngIf="emptyObjArr.length == 0">
+  <p>There is no Data to Fetch...</p>
+</div>

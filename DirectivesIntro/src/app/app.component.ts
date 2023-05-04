@@ -15,20 +15,24 @@ export class AppComponent {
     { id: 5, postTitle: 'Post5' },
   ];
 
+  emptyObjArr: Array<any> = [];
+
   // change detection
   addData() {
     this.objArr.push({
       id: this.objArr.length + 1,
       postTitle: 'Post' + (this.objArr.length + 1),
     });
+    this.emptyObjArr.push({
+      id: this.objArr.length + 1,
+      postTitle: 'Post' + (this.objArr.length + 1),
+    });
   }
 
-  deleteData(id: number) {
-    console.log('====================================');
-    console.log(this.objArr.filter((data) => data.id !== id));
-    console.log('====================================');
-    this.objArr = this.objArr.filter((data) => data.id !== id);
-    // let index = this.objArr.indexOf(post) pass post data instead of id
-    // this.objArr.splice(index, 1)
+  deleteData(index: number) {
+    // in react we would pass post.id to remove
+    // this.objArr = this.objArr.filter((data) => data.id !== id);
+
+    this.objArr.splice(index, 1)
   }
 }
