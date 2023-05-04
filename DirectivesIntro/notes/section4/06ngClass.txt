@@ -1,0 +1,9 @@
+<!-- ngClass -->
+<h1
+  [ngClass]="{
+    main: isActive,
+    'text-weight': isActive
+  }"
+>
+  ngClass
+</h1>
