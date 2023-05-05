@@ -25,4 +25,6 @@ export class PostComponent {
 }
 
 
-*** if we don't add our service to "providers" in @Component directive we will get "ERROR NullInjectorError: " error message. "providers: [ServiceName]"
+*** if we don't add our service to "providers" in @Component directive or in app.module.ts file inside providers array we will get "ERROR NullInjectorError: " error message. "providers: [ServiceName]"
+
+better to use providers from app.module.ts file because it will create service new instance only once in the memory and this will make our App more efficient
