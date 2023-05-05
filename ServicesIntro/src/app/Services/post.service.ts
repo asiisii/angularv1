@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 //with this we are providing service class as an injectable for root app, which means we can inject this service class to any components in our app without creating a new instance each and every new component.
 @Injectable({
   providedIn: 'root',

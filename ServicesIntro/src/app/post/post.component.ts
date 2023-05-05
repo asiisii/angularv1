@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PostService } from '../Services/post.service';
+import { Post } from '../models/post';
 
 @Component({
   selector: 'app-post',
@@ -14,10 +15,11 @@ export class PostComponent {
   }
 
   addPost() {
-    let newPost = {
+    let newPost: Post = {
       id: this.posts.length + 1,
       postTitle: 'post ' + (this.posts.length + 1),
     };
+
     this.postService.addPost(newPost);
   }
 }
