@@ -1,0 +1,28 @@
+Usage of Angular Services
+- we use it share data and common methods among components whether there is relationship between components or not
+
+for example:
+if Component 1 has button with click event and so does component 2 what we can do is create a button with click event in Angular Service and let both components use that method
+
+
+Dependency injection
+- instead of creating an instance on a service in a component, we can use Dependency injection framework that comes with Angular
+
+example: 
+@Component({
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css'],
+  providers: [PostService]
+})
+export class PostComponent {
+  posts!: Array<any>;
+
+  constructor(private postService: PostService) {
+    // let postService = new PostService()
+    this.posts = postService.postList
+  }
+}
+
+
+*** if we don't add our service to "providers" in @Component directive we will get "ERROR NullInjectorError: " error message. "providers: [ServiceName]"
