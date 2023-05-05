@@ -10,7 +10,14 @@ export class PostComponent {
   posts!: Array<any>;
 
   constructor(private postService: PostService) {
-    // let postService = new PostService()
     this.posts = postService.postList;
+  }
+
+  addPost() {
+    let newPost = {
+      id: this.posts.length + 1,
+      postTitle: 'post ' + (this.posts.length + 1),
+    };
+    this.postService.addPost(newPost);
   }
 }
