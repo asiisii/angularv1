@@ -1,0 +1,7 @@
+handle forms data
+
+formGroup class
+- formGroup class with form tags
+
+formControl class
+- we apply formControl class to input fields

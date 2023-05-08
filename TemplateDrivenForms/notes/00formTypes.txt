@@ -1,0 +1,7 @@
+FORM TYPES IN ANGULAR
+
+1. Template - Driven form
+  - we can get full control of the form and validate the input data, do form validation
+  - creating form group class new instance using directive (ngForm) inside the template we called template driven form
+2. Reactive form
+- creating form group instance by hand coding approach is we called angular reactive form
