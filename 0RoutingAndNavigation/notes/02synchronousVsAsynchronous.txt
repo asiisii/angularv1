@@ -1,0 +1,9 @@
+synchronous vs asnychronous
+
+1. synchronous code is executed in sequence - each statement waits for the previous statement to complete before executing 
+
+2 asnychronous code doesn't have to wait to execute the previous statement completely this can continue to run
+
+3. mostly JavaScript works as asnychronously
+
+

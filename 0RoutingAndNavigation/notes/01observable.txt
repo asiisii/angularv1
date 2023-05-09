@@ -1,0 +1,8 @@
+RxJs
+- library for composing asynchornous and event-based programs by using obserable sequences
+
+
+Observable
+- it is a sequence of data that is emitted data asnychronously or synchronously over a time of period 
+
+- it will continuously observe a set of stream data & automatically update or track that sequence of data whenever there is something changed
