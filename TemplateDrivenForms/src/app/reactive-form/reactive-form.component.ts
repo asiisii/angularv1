@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  NgForm,
+  FormArray,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -31,6 +37,8 @@ export class ReactiveFormComponent {
           Validators.pattern(this.contactNumRegex),
         ]),
       }),
+
+      skills: new FormArray([]),
     });
   }
 
@@ -52,6 +60,23 @@ export class ReactiveFormComponent {
 
   get ContactNum() {
     return this.form.get('contactDetails.contactNumber');
+  }
+
+  get skills() {
+    return this.form.get('skills') as FormArray
+  }
+
+  addSkills(skill: HTMLInputElement) {
+    this.skills.push(new FormControl(skill.value));
+    skill.value = ''
+
+    console.log('====================================');
+    console.log(this.form.value);
+    console.log('====================================');
+  }
+
+  removeSkill(index: number) {
+    this.skills.removeAt(index)
   }
 
   onSubmit() {
