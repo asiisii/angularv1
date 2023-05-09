@@ -1,0 +1,11 @@
+ANGULAR Reactive FORM
+
+1. inorder to make HTML form to Angular form we have to make new instance of 
+  a. formGroup class
+    - we make formGroup class new instance for form tags (ngForm)
+  b. formControl class
+    - we make formControl new instance for each and every input fields inside the form (ngModel)
+
+in Template - Driven form - we did all the declaration and validation almost everything in the HTML view page (ngForm)
+
+Reactive form - we will do all the declaration and validation almost everything from scratch inside the component file.

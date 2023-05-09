@@ -1,5 +1,6 @@
 <div class="container mt-5">
   <div class="form-area">
+    <h1 class="text-center">Tempalte Driven Form</h1>
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <div class="form-group">
         <label>First Name</label>
@@ -94,7 +95,11 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+        Submit
+      </button>
     </form>
   </div>
 </div>
+
+<app-reactive-form></app-reactive-form>
