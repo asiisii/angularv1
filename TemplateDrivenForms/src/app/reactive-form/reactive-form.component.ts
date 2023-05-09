@@ -36,9 +36,9 @@ export class ReactiveFormComponent {
     return this.form.get('address');
   }
 
-  onSubmit(f: NgForm) {
+  onSubmit() {
     console.log('====================================');
-    console.log(f.value);
+    console.log(this.form.value);
     console.log('====================================');
   }
 
