@@ -1,0 +1,16 @@
+what is Angular routing and navigation
+
+- routing is basically means navigating between pages
+
+Angular- routers
+
+- we use Angular routers to navigate through Components
+- Router is a main building core module of an Angular Framework
+- This Includes bunch of Directives and modules which help us to implement Routing & navigation
+
+how to implement
+1. Configure the Routes
+2. Add Router-Outlet
+3. Add Navigation Link Paths
+
+
