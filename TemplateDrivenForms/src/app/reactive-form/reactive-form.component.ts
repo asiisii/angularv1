@@ -8,6 +8,7 @@ import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 export class ReactiveFormComponent {
   form: any;
   emailRegex: string = '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$';
+  contactNumRegex: string = '[789][0-9]{9}';
 
   constructor() {
     this.form = new FormGroup({
@@ -20,7 +21,16 @@ export class ReactiveFormComponent {
         // Validators.pattern(this.emailRegex),
         Validators.email,
       ]),
-      address: new FormControl('', Validators.required),
+      // address: new FormControl('', Validators.required),
+
+      contactDetails: new FormGroup({
+        address: new FormControl('', Validators.required),
+        shippingAddress: new FormControl('', Validators.required),
+        contactNumber: new FormControl('', [
+          Validators.required,
+          Validators.pattern(this.contactNumRegex),
+        ]),
+      }),
     });
   }
 
@@ -33,7 +43,15 @@ export class ReactiveFormComponent {
   }
 
   get Address() {
-    return this.form.get('address');
+    return this.form.get('contactDetails.address');
+  }
+
+  get ShippingAddress() {
+    return this.form.get('contactDetails.shippingAddress');
+  }
+
+  get ContactNum() {
+    return this.form.get('contactDetails.contactNumber');
   }
 
   onSubmit() {
