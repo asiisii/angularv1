@@ -5,6 +5,7 @@ import {
   Validators,
   NgForm,
   FormArray,
+  FormBuilder,
 } from '@angular/forms';
 
 @Component({
@@ -16,30 +17,44 @@ export class ReactiveFormComponent {
   emailRegex: string = '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$';
   contactNumRegex: string = '[789][0-9]{9}';
 
-  constructor() {
-    this.form = new FormGroup({
-      fullName: new FormControl('', [
-        Validators.required,
-        Validators.minLength(5),
-      ]),
-      email: new FormControl('', [
-        Validators.required,
-        // Validators.pattern(this.emailRegex),
-        Validators.email,
-      ]),
-      // address: new FormControl('', Validators.required),
-
-      contactDetails: new FormGroup({
-        address: new FormControl('', Validators.required),
-        shippingAddress: new FormControl('', Validators.required),
-        contactNumber: new FormControl('', [
-          Validators.required,
-          Validators.pattern(this.contactNumRegex),
-        ]),
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      fullName: ['', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.email]],
+      contactDetails: fb.group({
+        address: ['', Validators.required],
+        shippingAddress: ['', Validators.required],
+        contactNumber: [
+          '',
+          [Validators.required, Validators.pattern(this.contactNumRegex)],
+        ],
       }),
-
-      skills: new FormArray([]),
+      skills: fb.array([])
     });
+
+    // this.form = new FormGroup({
+    //   fullName: new FormControl('', [
+    //     Validators.required,
+    //     Validators.minLength(5),
+    //   ]),
+    //   email: new FormControl('', [
+    //     Validators.required,
+    //     // Validators.pattern(this.emailRegex),
+    //     Validators.email,
+    //   ]),
+    //   // address: new FormControl('', Validators.required),
+
+    //   contactDetails: new FormGroup({
+    //     address: new FormControl('', Validators.required),
+    //     shippingAddress: new FormControl('', Validators.required),
+    //     contactNumber: new FormControl('', [
+    //       Validators.required,
+    //       Validators.pattern(this.contactNumRegex),
+    //     ]),
+    //   }),
+
+    //   skills: new FormArray([]),
+    // });
   }
 
   get fullName() {
@@ -63,12 +78,12 @@ export class ReactiveFormComponent {
   }
 
   get skills() {
-    return this.form.get('skills') as FormArray
+    return this.form.get('skills') as FormArray;
   }
 
   addSkills(skill: HTMLInputElement) {
     this.skills.push(new FormControl(skill.value));
-    skill.value = ''
+    skill.value = '';
 
     console.log('====================================');
     console.log(this.form.value);
@@ -76,7 +91,7 @@ export class ReactiveFormComponent {
   }
 
   removeSkill(index: number) {
-    this.skills.removeAt(index)
+    this.skills.removeAt(index);
   }
 
   onSubmit() {
